@@ -1,0 +1,221 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        body{
+            background-color: royalblue;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+        .container{
+            width: 550px;
+            height: auto;
+            background-color: white;
+            border-radius: 10px;
+            text-align: center;
+            padding: 10px;
+        }
+        .container h2{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 25px;
+            text-transform: uppercase;
+        }
+        .container .list-items {
+            list-style: none;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 25px;
+            font-weight: 600;
+            padding: 10px;
+            margin: 10px 0px;
+            background-color: orange;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <h2 id="main_heading">Favorite Programming Languages</h2>
+        <ul class="Programming">
+            <li class="list-items" id="Javascript">Javascript</li>
+            <li class="list-items" id="C++">C/C++</li>
+            <li class="list-items" id="Java">Java</li>
+            <li class="list-items" id="Python">Python</li>
+            <li class="list-items" id="Kotlin">Kotlin</li>
+            <li class="list-items" id="Carbon">Carbon</li>
+        </ul>
+    </div>
+    <script>
+
+        // let title = document.getElementById("main_heading");
+        // console.log(title);
+
+        // let items = document.getElementsByClassName("list-items");
+        // for(let i = 0 ; i < items.length; i++){
+        //     console.log(items[i]);
+        // }
+
+        // let heading = document.querySelector("h2");
+        // console.log(heading);
+
+        // let itemsAll = document.querySelectorAll(".list-items");
+        // console.log(itemsAll);
+        // for(let j = 0; j < itemsAll.length; j++){
+        //     console.log(itemsAll[j]);
+        // }
+
+        // for(let j = 0; j < itemsAll.length; j++){
+        //     itemsAll[j].innerHTML = "HELLO JAVASCRIPT";
+        // }
+
+        // let heading = document.querySelector("#main_heading");
+        // console.log(heading);
+        // //inline styling
+        // // heading.style.color = 'red';
+        // // heading.style.background = 'gray';
+
+        // const listItems = document.querySelectorAll(".list-items");
+        // console.log(listItems);
+
+        // // listItems.style.color = 'red';
+        // for(let i = 0; i < listItems.length; i++){
+        //     listItems[i].style.color = 'red';
+        // }
+        
+
+        // Create Elements 
+        
+        
+        // const main = document.querySelector(".container");
+        // const li = document.createElement("li");
+        // li.classList.add("list-items");
+        // // li.textContent = "Php/MySql";
+        // li.innerText = "Php/MySql";
+        // main.appendChild(li);
+
+
+        // li.remove();
+
+        // const item = document.getElementById("remove");
+        // item.remove();
+
+
+        // li.classList.add("list-items");
+        // li.classList.remove("class");
+
+        // console.log(li.classList.contains("list-items"));
+        
+        //remove attribute
+        // li.removeAttribute("class");
+        //add attribute
+        // li.setAttribute("class" , "list-items");
+        
+
+        //get attribute
+        // let atter = li.getAttribute("class");
+        // console.log(atter);
+
+        //remove element
+        // let relm = main.lastElementChild;
+        // main.removeChild(relm);
+        
+
+        // let parent = document.querySelector("ul");
+        // console.log(parent)
+        // console.log(parent.parentNode.parentNode.parentNode);
+        // console.log(parent.parentElement);
+
+        // ;
+
+
+
+        // const ul = document.querySelector("ul");
+        // console.log(ul.childNodes);
+        // // console.log(ul.firstChild);
+        // // console.log(ul.lastChild);
+
+        // ul.firstElementChild.style.color = "red";
+        // ul.lastElementChild.style.color = "red";
+
+        // let next = ul.firstElementChild.nextElementSibling.style.color = "red";
+        // let prev = ul.lastElementChild.previousElementSibling.style.color = "red";
+
+        // let neww = ul.lastElementChild.previousElementSibling.previousElementSibling.style.color = "blue";
+        // let mid = ul.firstElementChild.nextElementSibling.nextElementSibling.style.color = "blue";
+
+
+        // const ul = document.querySelector("ul");
+        // ul.childNodes[1].style.background = "blue";
+        // ul.childNodes[3].style.background = "wheat";
+        // ul.childNodes[5].style.background = "teal";
+        // ul.childNodes[7].style.background = "lime";
+        // ul.childNodes[9].style.background = "royalblue";
+        // ul.childNodes[11].style.background = "orange";
+
+
+
+        //traversing on siblings 
+        //traversing on siblings 
+
+        // let list = document.getElementById("list");
+        // console.log(list.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling);
+
+        let Javascript = document.getElementById("Javascript").addEventListener("click" , function(e) {
+            e.target.style.background = "red";
+            console.log(e.target.innerHTML+" is Clicked...");
+        });
+
+        let c = document.getElementById("C++").addEventListener("click" , function(e) {
+            e.target.style.background = "yellow";
+            console.log(e.target.innerHTML+" is Clicked...");
+        })
+        let java = document.getElementById("Java").addEventListener("click" , function(e) {
+            e.target.style.background = "teal";
+            console.log(e.target.innerHTML+" is Clicked...");
+        })
+        let Python = document.getElementById("Python").addEventListener("click" , function(e) {
+            e.target.style.background = "blue";
+            console.log(e.target.innerHTML+" is Clicked...");
+        })
+        let Kotlin = document.getElementById("Kotlin").addEventListener("click" , function(e) {
+            e.target.style.background = "yellowgreen";
+            console.log(e.target.innerHTML+" is Clicked...");
+        })
+        let Carbon = document.getElementById("Carbon").addEventListener("click" , function(e) {
+            e.target.style.background = "royalblue";
+            console.log(e.target.innerHTML+" is Clicked...");
+        })
+
+
+        let colors = ["yellow" , "green" , "teal" , "royalblue" , "red" , "gray"];
+        let iter = 0;
+
+        const parent = document.getElementsByClassName("Programming");
+        
+        for(i = 0; i < parent.length; i++){
+            parent[i].addEventListener("click" , function(e) {
+                e.target.style.background = colors[iter++];
+                console.log(e.target.innerHTML);
+            })
+        }
+    
+
+        
+
+        
+
+
+        
+
+
+    </script>
+</body>
+</html>

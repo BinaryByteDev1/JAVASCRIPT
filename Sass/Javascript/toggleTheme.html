@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: white;
+        }
+        .container{
+
+        }
+        .main{
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            width: 100%;
+            margin-top: 20px;
+            margin-right: 20px;
+
+        }
+        .main .toggle_box{
+            width: 50px;
+            height: 24px;
+            border: 1px solid black;
+            background-color: wheat ;
+            border-radius: 100px;
+            text-align: left;
+            cursor: pointer;
+        }
+        span{
+            display: inline-block;
+            width: 21px;
+            height: 21px;
+            /* border: 1px solid gray; */
+            background-color: rgb(255, 255, 255);
+            border-radius: 100px;
+            margin-top: 1px;
+            margin-left: 1px;
+            cursor: pointer;
+            transition: 0.4s ease-in-out;
+        }
+        .moveRight{
+            transform: translate(25px);
+            transition: 0.4s ease-in-out;
+            background-color: #252525;
+        }
+      
+        .theme{
+            background-color: #252525;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="main">
+            <div class="toggle_box">
+                <span id="toggle_Icon"></span>
+            </div>
+        </div>
+    </div>
+    <script>
+
+        const toggleBtn = document.querySelector(".toggle_box");
+        const toggleIcon = document.querySelector("#toggle_Icon");
+
+
+        toggleBtn.addEventListener("click" , ()=>{
+            toggleBtn.classList.toggle("setColor");
+            toggleIcon.classList.toggle("moveRight");
+            document.body.classList.toggle("theme");
+        })
+
+        
+        
+    </script>
+</body>
+</html>
